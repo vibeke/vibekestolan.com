@@ -1,0 +1,68 @@
+---
+import { Image } from "astro:assets";
+import heroImg from "@images/header-hero.svg";
+---
+<div class="wrapper">
+    <header>
+        <Image 
+            src={heroImg} 
+            alt="Purple illustration of woman holding various digital devices"
+            class:list={"header-image"}
+            style="width:100%;height:auto;"
+            width={heroImg.width}    
+        />
+        <hgroup>
+            <h1>Hi! <span>I'm Vibeke.</span></h1>
+            <h2>I do full-stack experience design</h2>
+        </hgroup>
+    </header>
+    <section>
+        <p>Titles are complicated, but I've landed on "full-stack UX Designer." In other words, I can:</p>
+        <ul>
+            <li>Research and define business and functional requirements</li>
+            <li>Document and improve business processes (as-is and to-be process mapping)</li>
+            <li>Conduct workshops with stakeholders and end users</li>
+            <li>Analyze existing solutions for usability issues</li>
+            <li>Produce diagrams, wireframes, prototypes, and high fidelity user interface designs</li>
+            <li>Translate the designs into frontend code and design system components</li>
+            <li>Communicate accessibility/WCAG, branding, and user needs to developers and executives</li>
+            <li>Produce training material and technical documentation, including printing/binding, video, and photography</li>
+        </ul>
+        <h2>About me</h2>
+        <p>When I'm not working, you can find me in the garden or the craft room, or hanging out with my family (husband, two dogs, and two bearded dragons).</p>
+        <p>I have always been obsessed with art and creating, and find it fascinating how much overlap there is between pattern drafting and computer programming. After all, punch cards were orginally invented to control looms!</p>
+        <p>Despite being borned and raised in Norway, I'm a terrible skier, and have never tried lutefisk.</p>
+    </section>
+</div>
+<style>
+    .wrapper {
+      margin: 0 auto;
+      max-width: 960px;
+      padding: 0 var(--space-s);
+    }
+    header {
+        position: relative;
+    }
+    hgroup {
+        position: absolute;
+        top: 6%;
+        left: 38%;
+        right: 20%;
+    }
+    .header-image {
+        width: 100%;
+        margin-bottom: -16.5%;
+    }
+    h1 {
+    }
+    h1 span {
+        font-size: var(--step-1);
+    }
+    h2 {
+        font-size: var(--step-2);
+    }
+    section {
+        background-color: var(--color-grey-dark);
+        padding: var(--space-s)
+    }
+</style>
