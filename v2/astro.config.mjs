@@ -2,7 +2,7 @@ import { defineConfig } from "astro/config";
 import fulldev from 'fulldev-ui/integration'
 
 export default defineConfig({
-  site: "https://astro-naut.netlify.app/",
+  site: "https://vibekestolan.com/",
   integrations: [
     fulldev()
   ]
