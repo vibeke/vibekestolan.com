@@ -1,5 +1,7 @@
 ---
 import { Image } from "astro:assets";
+import skills from "~/data/skills.json"
+import SkillItem from "@components/SkillItem.astro";
 import heroImg from "@images/header-hero.svg";
 ---
 <div class="wrapper">
@@ -17,17 +19,16 @@ import heroImg from "@images/header-hero.svg";
         </hgroup>
     </header>
     <section>
-        <p>Titles are complicated, but I've landed on "full-stack UX Designer." In other words, I can:</p>
-        <ul>
-            <li>Research and define business and functional requirements</li>
-            <li>Document and improve business processes (as-is and to-be process mapping)</li>
-            <li>Conduct workshops with stakeholders and end users</li>
-            <li>Analyze existing solutions for usability issues</li>
-            <li>Produce diagrams, wireframes, prototypes, and high fidelity user interface designs</li>
-            <li>Translate the designs into frontend code and design system components</li>
-            <li>Communicate accessibility/WCAG, branding, and user needs to developers and executives</li>
-            <li>Produce training material and technical documentation, including printing/binding, video, and photography</li>
-        </ul>
+        <h2>Some things I do</h2>
+        {
+            skills.map(({ title, listItems }) => (
+                <SkillItem 
+                    title={title}
+                    listItems={listItems}
+                />
+            ))
+        }
+        
         <h2>About me</h2>
         <p>When I'm not working, you can find me in the garden or the craft room, or hanging out with my family (husband, two dogs, and two bearded dragons).</p>
         <p>I have always been obsessed with art and creating, and find it fascinating how much overlap there is between pattern drafting and computer programming. After all, punch cards were orginally invented to control looms!</p>

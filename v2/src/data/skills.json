@@ -1,0 +1,71 @@
+[
+    {
+        "title": "Requirements research and definition",
+        "listItems" : [
+            "Uncover and define functional and business requirements by conducting end user and stakehold workshops",
+            "Legal and regulatory compliance"
+        ]
+    },
+    {
+        "title": "Process mapping",
+        "listItems": [
+            "Documenting current, as-is business processes",
+            "Analyzing and proposing improved, to-be processes",
+            "Digitizing analog processes and implementing smart devices/automation"
+        ]
+    },
+    {
+        "title": "Accessibility and usability",
+        "listItems": [
+            "Analyze existing solutions for usability issues (heuristic usability review)",
+            "Review solutions for accessibility and WCAG compliance",
+            "Communicate usability and accesibility concepts to stakeholders and developers"
+        ]
+    },
+    {
+        "title": "User interface design",
+        "listItems": [
+            "Produce information architecture diagrams and wireframes",
+            "Create low fidelity mockups and prototypes",
+            "Complete pixel perfect designs ready for developer handoff"
+        ]
+    },
+    {
+        "title": "Frontend development",
+        "listItems": [
+            "HTML, CSS, and JS markup",
+            "Theme and template customization / white-label software",
+            "Design implementation using common libraries and frameworks, and internal custom frameworks",
+            "Web application prototypes"
+        ]
+        
+    },
+    {
+        "title": "Design systems",
+        "listItems": [
+            "Comprehensive review and consolidation of existing design components",
+            "Organization and maintenance of Sketch/Figma/Adobe XD shared libraries",
+            "Documentation and implementation of developer friendly code component libraries and styleguides",
+            "Defining and setting up tool integrations and version control",
+            "Balancing internal and third-party design systems for overall look and feel in integrations and collaborations",
+            "Collaboration with brand and marketing teams",
+            "Quality assurance and review of adherence to design system"
+        ]
+    },
+    {
+        "title": "Documentation and training",
+        "listItems": [
+            "Document procedures and how-tos for various audiences",
+            "Record training and feature review videos",
+            "Demonstrate software for coworkers, end-users, executives, stakeholders, and potential customers"
+        ]
+    },
+    {
+        "title": "Graphic design",
+        "listItems": [
+            "Logo design, branding, and visual profile",
+            "Print material production like booth assets, flyers, reports, and packaging",
+            "Digital asset management"
+        ]
+    }
+]

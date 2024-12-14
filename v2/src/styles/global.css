@@ -1,11 +1,11 @@
 /* Typography */
 
 @font-face {
-  font-display: swap;
-  font-family: "Anybody";
-  font-style: normal;
-  font-weight: 400;
-  src: url("/fonts/anybody-v11-latin-regular.woff2") format("woff2");
+  font-family: 'Anybody';
+  font-stretch: 100,100; /* Note that font-stretch is a % of normal width */
+  font-style: normal; /* See note below */
+  font-weight: 100,600;
+  src: url("/fonts/Anybody-VariableFont_wdth,wght.woff2") format("woff2");
 }
 
 @font-face {
@@ -54,9 +54,12 @@ body {
 }
 
 h1,
-h2 {
+h2,
+h3 {
   color: var(--color-white);
   font-family: "Anybody", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
 }
 
 h1 {
@@ -65,6 +68,10 @@ h1 {
 h2 {
   font-size: var(--step-4);
 }
+h3 {
+  font-size: var(--step-1);
+  font-weight: 200;
+}
 
 a,
 blockquote,
@@ -72,7 +79,7 @@ ul,
 ol,
 p {
   font-family: "Inter", sans-serif;
-  font-size: var(--step-1);
+  font-size: var(--step-0);
   hyphens: auto;
 }
 

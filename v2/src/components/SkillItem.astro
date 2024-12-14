@@ -1,0 +1,7 @@
+---
+const {title, listItems} = Astro.props;
+---
+<h3>{title}</h3>
+<ul>
+    {listItems.map((data: any) => <li>{data}</li>)}
+</ul>
