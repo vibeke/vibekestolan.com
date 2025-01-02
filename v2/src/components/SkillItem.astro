@@ -5,3 +5,9 @@ const {title, listItems} = Astro.props;
 <ul>
     {listItems.map((data: any) => <li>{data}</li>)}
 </ul>
+
+<style>
+    h3 {
+        margin-top: var(--space-l);
+    }
+</style>

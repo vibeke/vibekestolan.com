@@ -3,8 +3,14 @@ import { Image } from "astro:assets";
 import skills from "~/data/skills.json"
 import SkillItem from "@components/SkillItem.astro";
 import heroImg from "@images/header-hero.svg";
+import ExternalLink from "./utils/ExternalLink.astro";
 ---
 <div class="wrapper">
+    <nav>
+        <a href="#whatido">What I do</a>
+        <a href="#contact">Contact</a>
+        <a href="#about">About me</a>
+    </nav>
     <header>
         <Image 
             src={heroImg} 
@@ -19,7 +25,7 @@ import heroImg from "@images/header-hero.svg";
         </hgroup>
     </header>
     <section>
-        <h2>Some things I do</h2>
+        <h2 id="whatido">What I do</h2>
         {
             skills.map(({ title, listItems }) => (
                 <SkillItem 
@@ -28,27 +34,46 @@ import heroImg from "@images/header-hero.svg";
                 />
             ))
         }
-        
-        <h2>About me</h2>
+        <h2 id="contact">Contact me</h2>
+        <p>Connect with me on <ExternalLink name="LinkedIn" href="https://www.linkedin.com/in/vibekesl/" /> or <ExternalLink name="Behance" href="https://www.behance.net/vibekestolan" /></p>
+        <p>You can also send an email to <a href="mailto:hello@vibekestolan.com">hello@vibekestolan.com</a></p>
+        <h2 id="about">About me</h2>
         <p>When I'm not working, you can find me in the garden or the craft room, or hanging out with my family (husband, two dogs, and two bearded dragons).</p>
-        <p>I have always been obsessed with art and creating, and find it fascinating how much overlap there is between pattern drafting and computer programming. After all, punch cards were orginally invented to control looms!</p>
         <p>Despite being borned and raised in Norway, I'm a terrible skier, and have never tried lutefisk.</p>
     </section>
 </div>
 <style>
     .wrapper {
-      margin: 0 auto;
+      margin: 0 auto var(--space-m) auto;
       max-width: 960px;
       padding: 0 var(--space-s);
+      container-name: wrapper;
+      container-type: inline-size;
+      display: grid;
+    }
+    nav {
+        position: fixed;
+        padding: var(--space-s) var(--space-l) var(--space-s) var(--space-s);
+        justify-self: right;
+        z-index: 1;
+        background: rgba(0,0,0,.5);
+    }
+    nav a {
+        margin: 0 var(--space-2xs);
     }
     header {
         position: relative;
     }
-    hgroup {
-        position: absolute;
-        top: 6%;
-        left: 38%;
-        right: 20%;
+    hgroup h2 {
+        margin-bottom: var(--space-m);
+    }
+    @container wrapper (min-width: 768px) {
+        .wrapper hgroup {
+            position: absolute;
+            top: 6%;
+            left: 38%;
+            right: 20%;
+        }
     }
     .header-image {
         width: 100%;
@@ -61,6 +86,7 @@ import heroImg from "@images/header-hero.svg";
     }
     h2 {
         font-size: var(--step-2);
+        margin-top: var(--space-m);
     }
     section {
         background-color: var(--color-grey-dark);
