@@ -11,8 +11,8 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "@astrojs/check": "^0.3.1",
-    "astro": "^4.0.3",
+    "@astrojs/check": "^0.9.4",
+    "astro": "^5.1.2",
     "fulldev-ui": "^0.4.33",
     "typescript": "^5.2.2"
   },
